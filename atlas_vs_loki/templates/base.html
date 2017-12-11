@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="device-width, initial-scale=1">
+    <title>{% block title_block %}Atlas vs Loki{% endblock %}</title>
+    {% include 'material/includes/material_css.html' %}
+    <script src="{% static 'material/js/jquery.js' %}"></script>
+    <script src="{% static 'js/init.js' %}"></script>
+    {% include 'material/includes/material_js.html' %}
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="z-depth-3" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="{% url 'home' %}" class="left brand-logo">
+          <img src="{% static 'images/' %}" alt=""
+               height="56" width="164"/>
+        </a>
+        <ul id="nav-mobile" class="right" style="display: none">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    {% block content_block %}{% endblock %}
+    <footer class="page-footer valign-wrapper z-depth-3">
+      <div class="container ">
+        <div class="row">
+          <div class="col 16 s12">
+            <a class="blue-grey-text" href="{% url 'home' %}"><h6 class="center">
+                &copy; </h6></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

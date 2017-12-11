@@ -1,0 +1,7 @@
+creds.py
+geckodriver.log
+__pycache__
+<<<<<<< HEAD
+*.pyc
+=======
+>>>>>>> 48341f6... twitter verify credentials data sent to main view
